@@ -63,6 +63,14 @@ hcf n d
   | n == 0 = d
   | d == 0 = n
   | n > d = hcf (n - d) d
-  | otherwise = hcf n (d - n) 
+  | otherwise = hcf n (d - n)
+
+-- Another solution
+hcf2 :: Int -> Int -> Int
+hcf2 x y
+    | y == 0    = x
+    | otherwise = hcf2 y (x `mod` y)
+
+
 
     
